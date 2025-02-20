@@ -1,0 +1,10 @@
+- name: learning about variables
+  hosts: localhost
+  become: yes
+  vars:
+   Trainer: Hitesh
+   Course: Devops
+  tasks:
+  - name: printing the variables
+    ansible.builtin.debug:
+      msg: "Trainer is {{Trainer}}, Course: {{Course}}"
